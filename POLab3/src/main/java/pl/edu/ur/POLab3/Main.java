@@ -9,7 +9,6 @@ public class Main extends Fibonacci {
         // TODO 1.4, 1.7, 
         // TODO 2.2
         // TODO 3.3, 3.4
-        
 
         //1.3======================================================================
         /*
@@ -70,7 +69,7 @@ public class Main extends Fibonacci {
          */
         //2.2========================================================================
         
-       
+        
         
         //3.1========================================================================
         // silnia rekurencyjnie
@@ -86,16 +85,49 @@ public class Main extends Fibonacci {
         System.out.print("Podaj liczbę: ");
         int liczba = input.nextInt();
         System.out.println(liczba + "! = " + silnia(liczba));
-        */ 
-        
+         */
+        //3.3========================================================================
+        /*
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj podstawe: ");
+        int x = input.nextInt();
+        System.out.println("Podaj wykładnik: ");
+        int n = input.nextInt();
+
+        System.out.println("Wynik potęgowania rekurencyjnego: " + potegaRe(x , n));
+        System.out.println("Wynik potegowania iteracyjnego: "+potegaIt(x , n));
+        */
         //3.4========================================================================
-        
-         /*
+        /*
         Scanner input = new Scanner(System.in);
         System.out.println("Który element ciągu Fibonacciego chcesz obliczyć: ");
         int n = input.nextInt();
         System.out.println(n + "-ty element ciągu Fibonacciego (rekurencja) wynosi: " + fibReku(n));
          */
+    }
+
+    // rekurencyjnie
+    public static int potegaRe(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        if (!(n % 2 == 0)) {
+            return x * (potegaRe(x, n - 1));
+        } else {
+            int a = potegaRe(x, n / 2);
+            return a*a;
+        }
+
+    }
+
+    // iteracyjnie        
+    public static int potegaIt(int x, int n) {
+        int wynik = 1;
+        while (n > 0) {
+            wynik = wynik *  x;
+            n = n - 1;
+        }
+        return wynik;
     }
 
 }
