@@ -68,9 +68,41 @@ public class Main extends Fibonacci {
         }
          */
         //2.2========================================================================
+        /*
+        String s = new String("Hello  ");
+        char[] wartosc = s.toCharArray();
+        for(int i=0;i<wartosc.length;i++)
+        {
+            System.out.println(wartosc[i]);
+        }
+        
+        byte[] b = s.getBytes();
+        for(int i=0;i<b.length;i++)
+        {
+            System.out.println(b[i]);
+        }
         
         
         
+        System.out.println(s.equals(s));
+        System.out.println(s.equalsIgnoreCase(s));
+        System.out.println(s.compareTo(s));
+        System.out.println(s.compareToIgnoreCase(s));
+        System.out.println(s.indexOf(2));
+        System.out.println(s.indexOf("ll"));
+        System.out.println(s.lastIndexOf("ll"));
+        System.out.println(s.lastIndexOf(2));
+        System.out.println(s.substring(0));
+        System.out.println(s.substring(0, 3));
+        System.out.println(s.replace("He", "A"));
+        System.out.println(s.trim()); // biale znaki
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toUpperCase());
+        System.out.println(s.split(" "));
+        System.out.println(s.split("1", 3));
+        
+        
+        */
         //3.1========================================================================
         // silnia rekurencyjnie
         /*
@@ -129,5 +161,7 @@ public class Main extends Fibonacci {
         }
         return wynik;
     }
+
+   
 
 }
